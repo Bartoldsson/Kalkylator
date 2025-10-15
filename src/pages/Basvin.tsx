@@ -327,7 +327,7 @@ export default function Basvin() {
               barSize={40}
               label={{
                 position: 'top',
-                formatter: (v: number) => `${v.toFixed(2)} g/L`
+                formatter: (v: number) => `${v.toFixed(2)} g/L`,
                 fill: '#111827', // svart text på värdena
                 fontWeight: 500,
                 }}
