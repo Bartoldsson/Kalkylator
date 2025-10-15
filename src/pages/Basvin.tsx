@@ -324,12 +324,13 @@ export default function Basvin() {
                 <Legend wrapperStyle={{ fontSize: 12 }} />
            <Bar
               dataKey="värde"
-              name="g/L"
               barSize={40}
               label={{
                 position: 'top',
-                formatter: (v: number) => `${v.toFixed(2)}`
-  }}
+                formatter: (v: number) => `${v.toFixed(2)} g/L`
+                fill: '#111827', // svart text på värdena
+                fontWeight: 500,
+                }}
 >
   {chartData.map((_, i) => (
     <Cell
