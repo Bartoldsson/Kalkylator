@@ -310,37 +310,31 @@ export default function Basvin() {
         <div className="card">
           <h2>Socker per liter – källfördelning</h2>
           <div style={{ height: 260 }}>
-            <ResponsiveContainer width="100%" height="100%">
-              <BarChart
-                data={chartData}
-                margin={{ top: 8, right: 8, bottom: 0, left: -35 }}
-              >
-                <XAxis
-                  dataKey="name"
-                  tick={{ fontSize: 12, fill: '#374151' }}
-                />
-                <YAxis tick={{ fontSize: 12, fill: '#374151' }} />
-                <Tooltip />
-                <Legend wrapperStyle={{ fontSize: 12 }} />
-           <Bar
-              dataKey="värde"
-              barSize={40}
-              label={{
-                position: 'top',
-                formatter: (v: number) => `${v.toFixed(2)} g/L`,
-                fill: '#111827', // svart text på värdena
-                fontWeight: 500,
-                }}
->
-  {chartData.map((_, i) => (
-    <Cell
-      key={i}
-      fill={i === 0 ? colorMust : i === 1 ? colorSugar : colorRS}
-    />
-  ))}
-</Bar>
-              </BarChart>
-            </ResponsiveContainer>
+            <ResponsiveContainer width="100%" height={250}>
+  <BarChart data={chartData}>
+    <XAxis dataKey="name" axisLine={false} tickLine={false} tick={false} />
+    <YAxis hide />
+    <Tooltip />
+    {/* <Legend />  // ta bort denna */}
+    <Bar
+      dataKey="värde"
+      barSize={40}
+      label={{
+        position: 'top',
+        formatter: (v: number) => `${v.toFixed(2)} g/L`,
+        fill: '#111827',
+        fontWeight: 500,
+      }}
+    >
+      {chartData.map((_, i) => (
+        <Cell
+          key={i}
+          fill={i === 0 ? colorMust : i === 1 ? colorSugar : colorRS}
+        />
+      ))}
+    </Bar>
+  </BarChart>
+</ResponsiveContainer>
           </div>
 
           <div style={{ display: 'flex', gap: 16, marginTop: 8 }}>
