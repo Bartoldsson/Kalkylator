@@ -12,19 +12,27 @@ export default function Home(){
           <h2>Andrajäsning</h2>
           <div className="grid cols-3">
             <div className="card">
-              <h3>Basvinkalkylator</h3>
-              <p className="sub">Dosering av socker och must, målalkohol och volym.</p>
-              <Link className="btn" to="/basvin">Öppna</Link>
-            </div>
-            <div className="card">
               <h3>Blendkalkylator</h3>
               <p className="sub">Lot-baserad blend, analyser och recept.</p>
               <Link className="btn" to="/blend">Öppna</Link>
             </div>
+
+            <div className="card">
+              <h3>Basvinkalkylator</h3>
+              <p className="sub">Dosering av socker och must, målalkohol och volym.</p>
+              <Link className="btn" to="/basvin">Öppna</Link>
+            </div>
+
             <div className="card">
               <h3>Jäststart till andrajäsning</h3>
               <p className="sub">Interaktiv manual och uträkningar.</p>
               <Link className="btn" to="/jaststart">Öppna</Link>
+            </div>
+
+            <div className="card">
+              <h3>Buteljering andrajäsning</h3>
+              <p className="sub">Instruktioner, dosering och tidsplan för buteljering.</p>
+              <Link className="btn" to="/buteljering">Öppna</Link>
             </div>
           </div>
         </section>
