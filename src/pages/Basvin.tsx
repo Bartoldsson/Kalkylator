@@ -34,6 +34,12 @@ function fmt(n?: number, d = 1) {
   return Number.isFinite(n ?? NaN) ? (n as number).toFixed(d) : '–'
 }
 
+// Dessa tre SKA finnas – de används längre ned i komponenten
+const fmt0 = (n?: number) => fmt(n, 0)
+const fmt1 = (n?: number) => fmt(n, 1)
+const fmt2 = (n?: number) => fmt(n, 2)
+}
+
 function fmt0(n?: number) { return fmt(n, 0) }
 function fmt2(n?: number) { return fmt(n, 2) }
 
