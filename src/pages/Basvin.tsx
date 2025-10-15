@@ -322,16 +322,22 @@ export default function Basvin() {
                 <YAxis tick={{ fontSize: 12, fill: '#374151' }} />
                 <Tooltip />
                 <Legend wrapperStyle={{ fontSize: 12 }} />
-                <Bar
-                  dataKey="värde"
-                  name="g/L"
-                  fill={colorMust}
-                  barSize={40}
-                  label={{
-                    position: 'top',
-                    formatter: (v: number) => `${v.toFixed(2)}`
-                  }}
-                />
+           <Bar
+              dataKey="värde"
+              name="g/L"
+              barSize={40}
+              label={{
+                position: 'top',
+                formatter: (v: number) => `${v.toFixed(2)}`
+  }}
+>
+  {chartData.map((_, i) => (
+    <Cell
+      key={i}
+      fill={i === 0 ? colorMust : i === 1 ? colorSugar : colorRS}
+    />
+  ))}
+</Bar>
               </BarChart>
             </ResponsiveContainer>
           </div>
