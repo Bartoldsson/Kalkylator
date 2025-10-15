@@ -7,6 +7,7 @@ import Basvin from './pages/Basvin'
 import Blend from './pages/Blend'
 import Jaststart from './pages/Jaststart'
 import Forpackningar from './pages/Forpackningar'
+import Buteljering from './pages/Buteljering'
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
@@ -17,6 +18,7 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
         <Route path="/blend" element={<Blend/>} />
         <Route path="/jaststart" element={<Jaststart/>} />
         <Route path="/inrapportering/forpackningar" element={<Forpackningar/>} />
+        <Route path="/buteljering" element={<Buteljering/>} />
       </Routes>
     </HashRouter>
   </React.StrictMode>
