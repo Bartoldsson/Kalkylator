@@ -159,7 +159,7 @@ export default function Basvin() {
             </label>
 
             <label>
-              <span className="lab">Vinets alkohol A₀</span>
+              <span className="lab">Vinets alkohol </span>
               <span className="row">
                 <input
                   type="number"
@@ -172,7 +172,7 @@ export default function Basvin() {
             </label>
 
             <label>
-              <span className="lab">RS i basvin Rᵥ</span>
+              <span className="lab">RS i basvin </span>
               <span className="row">
                 <input
                   type="number"
@@ -185,7 +185,7 @@ export default function Basvin() {
             </label>
 
             <label>
-              <span className="lab">Mustens socker Sₘ</span>
+              <span className="lab">Mustens socker </span>
               <span className="row">
                 <input
                   type="number"
@@ -198,7 +198,7 @@ export default function Basvin() {
             </label>
 
             <label>
-              <span className="lab">Målsocker i blandningen Sₜ</span>
+              <span className="lab">Målsocker i blandningen </span>
               <span className="row">
                 <input
                   type="number"
@@ -211,7 +211,7 @@ export default function Basvin() {
             </label>
 
             <label>
-              <span className="lab">Slutlig alkohol mål A_f</span>
+              <span className="lab">Slutlig alkohol mål </span>
               <span className="row">
                 <input
                   type="number"
@@ -310,32 +310,47 @@ export default function Basvin() {
         <div className="card">
           <h2>Socker per liter – källfördelning</h2>
           <div style={{ height: 260 }}>
-            <ResponsiveContainer width="100%" height={250}>
-  <BarChart data={chartData}>
-    <XAxis dataKey="name" axisLine={false} tickLine={false} tick={false} />
-    <YAxis hide />
-    <Tooltip />
-    {/* <Legend />  // ta bort denna */}
-    <Bar
-      dataKey="värde"
-      barSize={40}
-      label={{
-        position: 'top',
-        formatter: (v: number) => `${v.toFixed(2)} g/L`,
-        fill: '#111827',
-        fontWeight: 500,
-      }}
+  <ResponsiveContainer width="100%" height="100%">
+    <BarChart
+      data={chartData}
+      margin={{ top: 26, right: 12, bottom: 16, left: 8 }}
     >
-      {chartData.map((_, i) => (
-        <Cell
-          key={i}
-          fill={i === 0 ? colorMust : i === 1 ? colorSugar : colorRS}
+      <XAxis
+        dataKey="name"
+        axisLine={true}
+        tickLine={false}
+        tick={{ fontSize: 12, fill: '#374151' }}
+      />
+      <YAxis
+        axisLine={true}
+        tickLine={false}
+        tick={{ fontSize: 12, fill: '#374151' }}
+        domain={[0, (dataMax: number) => Math.ceil(dataMax + 5)]}  // lite luft ovanför staplarna
+      />
+      <Tooltip />
+      {/* Ta bort Legend helt för att slippa “svarta klumpen” */}
+      {/* <Legend /> */}
+
+      <Bar dataKey="värde" barSize={40}>
+        {/* Värdeetiketter ovanpå varje stapel, i svart och med “g/L” */}
+        <LabelList
+          dataKey="värde"
+          position="top"
+          formatter={(v: number) => `${v.toFixed(2)} g/L`}
+          fill="#111827"
+          style={{ fontWeight: 500 }}
+          offset={8}  // liten offset så texten inte klipps
         />
-      ))}
-    </Bar>
-  </BarChart>
-</ResponsiveContainer>
-          </div>
+        {chartData.map((_, i) => (
+          <Cell
+            key={i}
+            fill={i === 0 ? colorMust : i === 1 ? colorSugar : colorRS}
+          />
+        ))}
+      </Bar>
+    </BarChart>
+  </ResponsiveContainer>
+</div>
 
           <div style={{ display: 'flex', gap: 16, marginTop: 8 }}>
             <span className="row" style={{ color: '#111827' }}>
