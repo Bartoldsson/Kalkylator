@@ -1,3 +1,4 @@
+
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import { HashRouter, Routes, Route } from 'react-router-dom'
@@ -7,7 +8,7 @@ import Basvin from './pages/Basvin'
 import Blend from './pages/Blend'
 import Jaststart from './pages/Jaststart'
 import Forpackningar from './pages/Forpackningar'
-import Buteljering from './pages/Buteljering'
+import Leverans from './pages/Leverans'
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
@@ -18,7 +19,7 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
         <Route path="/blend" element={<Blend/>} />
         <Route path="/jaststart" element={<Jaststart/>} />
         <Route path="/inrapportering/forpackningar" element={<Forpackningar/>} />
-        <Route path="/buteljering" element={<Buteljering/>} />
+        <Route path="/instruktioner/leverans" element={<Leverans/>} />
       </Routes>
     </HashRouter>
   </React.StrictMode>
