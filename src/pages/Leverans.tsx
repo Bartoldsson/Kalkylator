@@ -1,4 +1,5 @@
 import React from "react"
+import { Link } from 'react-router-dom'
 
 const tokens = {
   bg: "#F6F7FB",
@@ -98,10 +99,10 @@ const sections: Section[] = [
 ]
 
 const Card: React.FC<React.PropsWithChildren<{title?: string; sub?: string}>> = ({ title, sub, children }) => (
-  <section style={{ background: '#FFFFFF', border: '1px solid #E5E7EB', borderRadius: 12, boxShadow: '0 2px 10px rgba(0,0,0,.04)' }}>
+  <section style={{ background: tokens.card, border: `1px solid ${tokens.border}`, borderRadius: 12, boxShadow: "0 2px 10px rgba(0,0,0,.04)" }}>
     {(title || sub) && (
-      <header style={{ padding: 12, borderBottom: '1px solid #E5E7EB' }}>
-        {sub && <div style={{ color: '#6B7280', fontSize: 12, marginBottom: 2 }}>{sub}</div>}
+      <header style={{ padding: 12, borderBottom: `1px solid ${tokens.border}` }}>
+        {sub && <div style={{ color: tokens.muted, fontSize: 12, marginBottom: 2 }}>{sub}</div>}
         {title && <h2 style={{ margin: 0, fontSize: 16 }}>{title}</h2>}
       </header>
     )}
@@ -115,23 +116,23 @@ const Row: React.FC<React.PropsWithChildren<{}>> = ({ children }) => (
 
 const Btn: React.FC<React.ButtonHTMLAttributes<HTMLButtonElement>> = ({ children, style, ...rest }) => (
   <button {...rest} style={{
-    padding: '8px 12px', borderRadius: 8, border: '1px solid #E5E7EB',
-    background: '#2563EB', color: '#fff', fontWeight: 600, ...style
+    padding: '8px 12px', borderRadius: 8, border: `1px solid ${tokens.border}`,
+    background: tokens.blue, color: '#fff', fontWeight: 600, ...style
   }}>{children}</button>
 )
 
 const LinkBtn: React.FC<{ href: string; label: string }> = ({ href, label }) => (
   <a href={href} target="_blank" rel="noreferrer" style={{
     display: 'inline-flex', alignItems: 'center', gap: 8,
-    padding: '6px 10px', borderRadius: 8, border: '1px solid #E5E7EB',
-    background: '#fff', color: '#2563EB', textDecoration: 'none', fontWeight: 600
+    padding: '6px 10px', borderRadius: 8, border: `1px solid ${tokens.border}`,
+    background: '#fff', color: tokens.blue, textDecoration: 'none', fontWeight: 600
   }}>{label}</a>
 )
 
 const CheckboxItem: React.FC<{ item: Item; checked: boolean; onToggle: () => void }> = ({ item, checked, onToggle }) => (
   <li style={{
     display: 'flex', alignItems: 'flex-start', gap: 10, padding: 10,
-    border: '1px solid #E5E7EB', borderRadius: 8, background: '#F9FAFB'
+    border: `1px solid ${tokens.border}`, borderRadius: 8, background: '#F9FAFB'
   }}>
     <input type="checkbox" checked={checked} onChange={onToggle} style={{ width: 18, height: 18, marginTop: 2 }} />
     <div style={{ flex: 1 }}>
@@ -139,7 +140,7 @@ const CheckboxItem: React.FC<{ item: Item; checked: boolean; onToggle: () => voi
         <div style={{ fontWeight: 600 }}>{item.title}</div>
         {item.linkHref && item.linkLabel && <LinkBtn href={item.linkHref} label={item.linkLabel} />}
       </div>
-      {item.note && <div style={{ color: '#6B7280', fontSize: 13, marginTop: 4 }}>{item.note}</div>}
+      {item.note && <div style={{ color: tokens.muted, fontSize: 13, marginTop: 4 }}>{item.note}</div>}
     </div>
   </li>
 )
@@ -172,7 +173,7 @@ export default function Leverans(){
       }
       lines.push("")
     }
-    return lines.join("\\n")
+    return lines.join("\n")
   }
 
   const sendEmailAndClear = () => {
@@ -188,9 +189,12 @@ export default function Leverans(){
   return (
     <div style={{ background: tokens.bg, color: tokens.text, minHeight: '100vh' }}>
       <div style={{ maxWidth: 1160, margin: '0 auto', padding: 16 }}>
-        <header style={{ marginBottom: 12 }}>
-          <h1 style={{ margin: 0, fontSize: 20, fontWeight: 700 }}>Leverans – Checklista</h1>
-          <div style={{ color: tokens.muted, fontSize: 13 }}>Interaktiv lista med länkar till system. Bocka av steg för steg.</div>
+        <header style={{ marginBottom: 12, display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
+          <Link to="/" style={{ textDecoration: 'none', color: tokens.blue, fontWeight: 600 }}>← Till startsida</Link>
+          <div>
+            <h1 style={{ margin: 0, fontSize: 20, fontWeight: 700 }}>Leverans – Checklista</h1>
+            <div style={{ color: tokens.muted, fontSize: 13 }}>Interaktiv lista med länkar till system. Bocka av steg för steg.</div>
+          </div>
         </header>
 
         <div style={{ display: 'grid', gap: 16 }}>
