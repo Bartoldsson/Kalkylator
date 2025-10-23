@@ -10,8 +10,7 @@
        <div className="stack">
          <section className="card">
            <h2>Andrajäsning</h2>
--          <div className="grid cols-3">
-+          <div className="grid cols-4">
+          <div className="grid cols-4">
              <div className="card">
                <h3>Blendkalkylator</h3>
                <p className="sub">Lot-baserad blend, analyser och recept.</p>
