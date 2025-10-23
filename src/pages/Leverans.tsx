@@ -98,6 +98,22 @@ const sections: Section[] = [
   }
 ]
 
+const Card: React.FC<React.PropsWithChildren<{title?: string; sub?: string}>> = ({ title, sub, children }) => (
+  <section style={{ background: tokens.card, border: `1px solid ${tokens.border}`, borderRadius: 12, boxShadow: "0 2px 10px rgba(0,0,0,.04)" }}>
+    {(title || sub) && (
+      <header style={{ padding: 12, borderBottom: `1px solid ${tokens.border}` }}>
+        {sub && <div style={{ color: tokens.muted, fontSize: 12, marginBottom: 2 }}>{sub}</div>}
+        {title && <h2 style={{ margin: 0, fontSize: 16 }}>{title}</h2>}
+      </header>
+    )}
+    <div style={{ padding: 16 }}>{children}</div>
+  </section>
+)
+
+const Row: React.FC<React.PropsWithChildren<{}>> = ({ children }) => (
+  <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>{children}</div>
+)
+
 const Btn: React.FC<React.ButtonHTMLAttributes<HTMLButtonElement>> = ({ children, style, ...rest }) => (
   <button {...rest} style={{
     padding: '8px 12px', borderRadius: 8, border: `1px solid ${tokens.border}`,
@@ -130,15 +146,13 @@ const CheckboxItem: React.FC<{ item: Item; checked: boolean; onToggle: () => voi
 )
 
 export default function Leverans(){
-  const [state, setState] = React.useState<Record<string, boolean>>(() => {
-    try { return JSON.parse(localStorage.getItem(LS_KEY) || "{}") } catch { return {} }
-  })
+  const [state, setState] = React.useState<Record<string, boolean>>(() => loadState())
   const [who, setWho] = React.useState<string>("")
 
   const setChecked = (id: string, val: boolean) => {
     setState(s => {
       const next = { ...s, [id]: val }
-      localStorage.setItem(LS_KEY, JSON.stringify(next))
+      saveState(next)
       return next
     })
   }
@@ -169,14 +183,13 @@ export default function Leverans(){
     window.location.href = mailto
     const cleared: Record<string, boolean> = {}
     setState(cleared)
-    localStorage.setItem(LS_KEY, JSON.stringify(cleared))
+    saveState(cleared)
   }
 
   return (
     <div style={{ background: tokens.bg, color: tokens.text, minHeight: '100vh' }}>
       <div style={{ maxWidth: 1160, margin: '0 auto', padding: 16 }}>
-        <header style={{ marginBottom: 12, display: 'flex', alignItems: 'center', gap: 12 }}>
-          <Link to="/" style={{ textDecoration: 'none', color: tokens.blue, fontWeight: 600 }}>← Till startsida</Link>
+        <header style={{ marginBottom: 12, display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
           <div>
             <h1 style={{ margin: 0, fontSize: 20, fontWeight: 700 }}>Leverans – Checklista</h1>
             <div style={{ color: tokens.muted, fontSize: 13 }}>Interaktiv lista med länkar till system. Bocka av steg för steg.</div>
@@ -184,23 +197,26 @@ export default function Leverans(){
         </header>
 
         <div style={{ display: 'grid', gap: 16 }}>
-          {sections.map(sec => (
-            <section key={sec.id} style={{ background: tokens.card, border: `1px solid ${tokens.border}`, borderRadius: 12, boxShadow: "0 2px 10px rgba(0,0,0,.04)" }}>
-              <header style={{ padding: 12, borderBottom: `1px solid ${tokens.border}` }}>
-                <h2 style={{ margin: 0, fontSize: 16 }}>{sec.title}</h2>
-              </header>
-              <div style={{ padding: 16 }}>
-                <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'grid', gap: 8 }}>
-                  {sec.items.map(it => (
-                    <CheckboxItem key={it.id} item={it} checked={!!state[it.id]} onToggle={() => setChecked(it.id, !state[it.id])} />
-                  ))}
-                </ul>
+          <Card>
+            <Row>
+              <div style={{ marginLeft: 'auto' }}>
+                <Btn onClick={printPage} style={{ background: '#fff', color: tokens.text }}>Skriv ut / PDF</Btn>
               </div>
-            </section>
+            </Row>
+          </Card>
+
+          {sections.map(sec => (
+            <Card key={sec.id} title={sec.title}>
+              <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'grid', gap: 8 }}>
+                {sec.items.map(it => (
+                  <CheckboxItem key={it.id} item={it} checked={!!state[it.id]} onToggle={() => setChecked(it.id, !state[it.id])} />
+                ))}
+              </ul>
+            </Card>
           ))}
 
-          <section style={{ background: tokens.card, border: `1px solid ${tokens.border}`, borderRadius: 12, boxShadow: "0 2px 10px rgba(0,0,0,.04)" }}>
-            <div style={{ padding: 16, display: 'grid', gap: 8 }}>
+          <Card>
+            <div style={{ display: 'grid', gap: 8 }}>
               <div style={{ display: 'grid', gap: 4 }}>
                 <label style={{ fontSize: 13, color: tokens.muted }}>Utfört av (namn)</label>
                 <input
@@ -209,23 +225,16 @@ export default function Leverans(){
                   placeholder="t.ex. Claes"
                   style={{
                     width: '100%', padding: '8px 12px', borderRadius: 8,
-                    border: `1px solid ${tokens.border}`, background: "#E3F2FD"
+                    border: `1px solid ${tokens.border}`, background: tokens.input
                   }}
                 />
               </div>
               <div style={{ display: 'flex', gap: 8, justifyContent: 'space-between', alignItems: 'center' }}>
-                <div style={{ color: "#6B7280", fontSize: 12 }}>Status sparas lokalt i din webbläsare.</div>
+                <div style={{ color: tokens.muted, fontSize: 12 }}>Status sparas lokalt i din webbläsare.</div>
                 <Btn onClick={sendEmailAndClear}>Skicka mejl & rensa</Btn>
               </div>
             </div>
-          </section>
-
-          <div style={{ display: 'flex', justifyContent: 'flex-end', marginTop: 12 }}>
-            <button onClick={printPage}
-              style={{ padding: '8px 12px', borderRadius: 8, border: `1px solid ${tokens.border}`, background: '#fff', color: tokens.text, fontWeight: 600 }}>
-              Skriv ut / PDF
-            </button>
-          </div>
+          </Card>
         </div>
       </div>
 
