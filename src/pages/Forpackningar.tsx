@@ -5,7 +5,6 @@
 
 
 <!DOCTYPE html>
-<html
   lang="en"
   
   data-color-mode="auto" data-light-theme="light" data-dark-theme="dark"
@@ -22,19 +21,10 @@
 
 
 
-  <head>
-    <meta charset="utf-8">
-  <link rel="dns-prefetch" href="https://github.githubassets.com">
-  <link rel="dns-prefetch" href="https://avatars.githubusercontent.com">
-  <link rel="dns-prefetch" href="https://github-cloud.s3.amazonaws.com">
-  <link rel="dns-prefetch" href="https://user-images.githubusercontent.com/">
-  <link rel="preconnect" href="https://github.githubassets.com" crossorigin>
-  <link rel="preconnect" href="https://avatars.githubusercontent.com">
 
   
 
 
-  <link crossorigin="anonymous" media="all" rel="stylesheet" href="https://github.githubassets.com/assets/light-44e67b0cd5d5.css" /><link crossorigin="anonymous" media="all" rel="stylesheet" href="https://github.githubassets.com/assets/dark-cb035ed575b8.css" /><link data-color-theme="light_high_contrast" crossorigin="anonymous" media="all" rel="stylesheet" data-href="https://github.githubassets.com/assets/light_high_contrast-b51c2fae25e8.css" /><link data-color-theme="light_colorblind" crossorigin="anonymous" media="all" rel="stylesheet" data-href="https://github.githubassets.com/assets/light_colorblind-dadcba82130c.css" /><link data-color-theme="light_colorblind_high_contrast" crossorigin="anonymous" media="all" rel="stylesheet" data-href="https://github.githubassets.com/assets/light_colorblind_high_contrast-cdc36145225e.css" /><link data-color-theme="light_tritanopia" crossorigin="anonymous" media="all" rel="stylesheet" data-href="https://github.githubassets.com/assets/light_tritanopia-0ca195e3b5f3.css" /><link data-color-theme="light_tritanopia_high_contrast" crossorigin="anonymous" media="all" rel="stylesheet" data-href="https://github.githubassets.com/assets/light_tritanopia_high_contrast-f9fb5556a83f.css" /><link data-color-theme="dark_high_contrast" crossorigin="anonymous" media="all" rel="stylesheet" data-href="https://github.githubassets.com/assets/dark_high_contrast-99e9b1169976.css" /><link data-color-theme="dark_colorblind" crossorigin="anonymous" media="all" rel="stylesheet" data-href="https://github.githubassets.com/assets/dark_colorblind-9541c4141757.css" /><link data-color-theme="dark_colorblind_high_contrast" crossorigin="anonymous" media="all" rel="stylesheet" data-href="https://github.githubassets.com/assets/dark_colorblind_high_contrast-bc604fc65912.css" /><link data-color-theme="dark_tritanopia" crossorigin="anonymous" media="all" rel="stylesheet" data-href="https://github.githubassets.com/assets/dark_tritanopia-384776200fd7.css" /><link data-color-theme="dark_tritanopia_high_contrast" crossorigin="anonymous" media="all" rel="stylesheet" data-href="https://github.githubassets.com/assets/dark_tritanopia_high_contrast-489c70dedd0a.css" /><link data-color-theme="dark_dimmed" crossorigin="anonymous" media="all" rel="stylesheet" data-href="https://github.githubassets.com/assets/dark_dimmed-1545a2e9e540.css" /><link data-color-theme="dark_dimmed_high_contrast" crossorigin="anonymous" media="all" rel="stylesheet" data-href="https://github.githubassets.com/assets/dark_dimmed_high_contrast-4c1792a987c3.css" />
 
   <style type="text/css">
     :root {
@@ -46,12 +36,6 @@
     }
   </style>
 
-    <link crossorigin="anonymous" media="all" rel="stylesheet" href="https://github.githubassets.com/assets/primer-primitives-15839d47b75d.css" />
-    <link crossorigin="anonymous" media="all" rel="stylesheet" href="https://github.githubassets.com/assets/primer-a5c85403da8c.css" />
-    <link crossorigin="anonymous" media="all" rel="stylesheet" href="https://github.githubassets.com/assets/global-4d11e88b2383.css" />
-    <link crossorigin="anonymous" media="all" rel="stylesheet" href="https://github.githubassets.com/assets/github-7bf1881153e4.css" />
-  <link crossorigin="anonymous" media="all" rel="stylesheet" href="https://github.githubassets.com/assets/repository-5d735668c600.css" />
-<link crossorigin="anonymous" media="all" rel="stylesheet" href="https://github.githubassets.com/assets/code-9c9b8dc61e74.css" />
 
   
 
@@ -116,123 +100,69 @@
 <script crossorigin="anonymous" type="application/javascript" src="https://github.githubassets.com/assets/app_assets_modules_react-code-view_utilities_lines_ts-1f026aed255e.js" defer="defer"></script>
 <script crossorigin="anonymous" type="application/javascript" src="https://github.githubassets.com/assets/packages_code-view-shared_utilities_web-worker_ts-packages_code-view-shared_worker-jobs_debou-a85645-b1eb8311b77e.js" defer="defer"></script>
 <script crossorigin="anonymous" type="application/javascript" src="https://github.githubassets.com/assets/react-code-view-da877e857f25.js" defer="defer"></script>
-<link crossorigin="anonymous" media="all" rel="stylesheet" href="https://github.githubassets.com/assets/primer-react.3d66a64c5878cc361e85.module.css" />
-<link crossorigin="anonymous" media="all" rel="stylesheet" href="https://github.githubassets.com/assets/react-code-view.04c2faa8128f67bb12f8.module.css" />
-
-
-  <title>Kalkylator/src/pages/Forpackningar.tsx at main · Bartoldsson/Kalkylator</title>
 
 
 
-  <meta name="route-pattern" content="/:user_id/:repository/blob/*name(/*path)" data-turbo-transient>
-  <meta name="route-controller" content="blob" data-turbo-transient>
-  <meta name="route-action" content="show" data-turbo-transient>
-  <meta name="fetch-nonce" content="v2:04fe5892-8721-8e31-96bc-1c834ecd407b">
+
+
 
     
-  <meta name="current-catalog-service-hash" content="f3abb0cc802f3d7b95fc8762b94bdcb13bf39634c40c357301c4aa1d67a256fb">
 
 
-  <meta name="request-id" content="71A1:B202C:AF941A:CFC1F2:68F94733" data-turbo-transient="true" /><meta name="html-safe-nonce" content="601ef96ab39a09a23a2b12278e28c8c46c11ecabc62d9d2c8e03a0022794a68e" data-turbo-transient="true" /><meta name="visitor-payload" content="eyJyZWZlcnJlciI6Imh0dHBzOi8vZ2l0aHViLmNvbS9CYXJ0b2xkc3Nvbi9LYWxreWxhdG9yL3RyZWUvbWFpbi9zcmMvcGFnZXMiLCJyZXF1ZXN0X2lkIjoiNzFBMTpCMjAyQzpBRjk0MUE6Q0ZDMUYyOjY4Rjk0NzMzIiwidmlzaXRvcl9pZCI6IjUxMTcxMTMxMTU4MzQ5MTQ4MjQiLCJyZWdpb25fZWRnZSI6InN3ZWRlbmNlbnRyYWwiLCJyZWdpb25fcmVuZGVyIjoiaWFkIn0=" data-turbo-transient="true" /><meta name="visitor-hmac" content="7dc37e8729370fbc27daabcdd9a3db8b6b632e3ec887d80d901d8d039341463c" data-turbo-transient="true" />
 
 
-    <meta name="hovercard-subject-tag" content="repository:1076708285" data-turbo-transient>
 
-
-  <meta name="github-keyboard-shortcuts" content="repository,source-code,file-tree,copilot" data-turbo-transient="true" />
-  
-
-  <meta name="selected-link" value="repo_source" data-turbo-transient>
-  <link rel="assets" href="https://github.githubassets.com/">
-
-    <meta name="google-site-verification" content="Apib7-x98H0j5cPqHWwSMm6dNU4GmODRoqxLiDzdx9I">
-
-<meta name="octolytics-url" content="https://collector.github.com/github/collect" /><meta name="octolytics-actor-id" content="234386957" /><meta name="octolytics-actor-login" content="Bartoldsson" /><meta name="octolytics-actor-hash" content="ef55b968692adec48b5b82fd92039e77fbcb918c76be3f5753e3cb312a23b196" />
-
-  <meta name="analytics-location" content="/&lt;user-name&gt;/&lt;repo-name&gt;/blob/show" data-turbo-transient="true" />
 
   
 
 
 
 
-    <meta name="user-login" content="Bartoldsson">
 
-  <link rel="sudo-modal" href="/sessions/sudo_modal">
-
-    <meta name="viewport" content="width=device-width">
-
-    
-
-      <meta name="description" content="Contribute to Bartoldsson/Kalkylator development by creating an account on GitHub.">
-
-      <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="GitHub">
-
-    <link rel="fluid-icon" href="https://github.com/fluidicon.png" title="GitHub">
-    <meta property="fb:app_id" content="1401488693436528">
-    <meta name="apple-itunes-app" content="app-id=1477376905, app-argument=https://github.com/Bartoldsson/Kalkylator/blob/main/src/pages/Forpackningar.tsx" />
-
-      <meta name="twitter:image" content="https://opengraph.githubassets.com/1aba03b85e82b66740c287247d451e6253e40093403ee5107a6c81002a1a4207/Bartoldsson/Kalkylator" /><meta name="twitter:site" content="@github" /><meta name="twitter:card" content="summary_large_image" /><meta name="twitter:title" content="Kalkylator/src/pages/Forpackningar.tsx at main · Bartoldsson/Kalkylator" /><meta name="twitter:description" content="Contribute to Bartoldsson/Kalkylator development by creating an account on GitHub." />
-  <meta property="og:image" content="https://opengraph.githubassets.com/1aba03b85e82b66740c287247d451e6253e40093403ee5107a6c81002a1a4207/Bartoldsson/Kalkylator" /><meta property="og:image:alt" content="Contribute to Bartoldsson/Kalkylator development by creating an account on GitHub." /><meta property="og:image:width" content="1200" /><meta property="og:image:height" content="600" /><meta property="og:site_name" content="GitHub" /><meta property="og:type" content="object" /><meta property="og:title" content="Kalkylator/src/pages/Forpackningar.tsx at main · Bartoldsson/Kalkylator" /><meta property="og:url" content="https://github.com/Bartoldsson/Kalkylator/blob/main/src/pages/Forpackningar.tsx" /><meta property="og:description" content="Contribute to Bartoldsson/Kalkylator development by creating an account on GitHub." />
   
 
 
-      <link rel="shared-web-socket" href="wss://alive.github.com/_sockets/u/234386957/ws?session=eyJ2IjoiVjMiLCJ1IjoyMzQzODY5NTcsInMiOjE4MTAxMjczODQsImMiOjg4NTMxMDgwOSwidCI6MTc2MTE2NzE1Nn0=--da0836264a6622153eebd1b293a1b1b6bee3b730092501470fa9f25761faf183" data-refresh-url="/_alive" data-session-id="3c1fbfad348b026196d95e208cade433f7137614e98d0c0813fad2670b2345c7">
-      <link rel="shared-web-socket-src" href="/assets-cdn/worker/socket-worker-7db934acff24.js">
 
 
-      <meta name="hostname" content="github.com">
-
-
-      <meta name="keyboard-shortcuts-preference" content="all">
-      <meta name="hovercards-preference" content="true">
-      <meta name="announcement-preference-hovercard" content="true">
-
-        <meta name="expected-hostname" content="github.com">
-
-
-  <meta http-equiv="x-pjax-version" content="7ae9717581bbd3fd1db9667fffd213854964059191035e7b299bfe614db4be6e" data-turbo-track="reload">
-  <meta http-equiv="x-pjax-csp-version" content="c922ef32c4ab94f8b870c62883f3e41755ec705db76ec4efb0d343458f1e28c7" data-turbo-track="reload">
-  <meta http-equiv="x-pjax-css-version" content="0dc743cd5a6b5ca18dd20307bc7dfd212d2ced65c9da72fb83c0e0f0e41596a5" data-turbo-track="reload">
-  <meta http-equiv="x-pjax-js-version" content="7bfd6cb9a44bbde9572e6a1f5318a5e944acb5c6d1c1c3444e040331be0bffb7" data-turbo-track="reload">
-
-  <meta name="turbo-cache-control" content="no-preview" data-turbo-transient="">
-
-      <meta name="turbo-cache-control" content="no-cache" data-turbo-transient>
-
-    <meta data-hydrostats="publish">
-
-  <meta name="go-import" content="github.com/Bartoldsson/Kalkylator git https://github.com/Bartoldsson/Kalkylator.git">
-
-  <meta name="octolytics-dimension-user_id" content="234386957" /><meta name="octolytics-dimension-user_login" content="Bartoldsson" /><meta name="octolytics-dimension-repository_id" content="1076708285" /><meta name="octolytics-dimension-repository_nwo" content="Bartoldsson/Kalkylator" /><meta name="octolytics-dimension-repository_public" content="true" /><meta name="octolytics-dimension-repository_is_fork" content="false" /><meta name="octolytics-dimension-repository_network_root_id" content="1076708285" /><meta name="octolytics-dimension-repository_network_root_nwo" content="Bartoldsson/Kalkylator" />
 
 
 
     
 
-    <meta name="turbo-body-classes" content="logged-in env-production page-responsive">
 
 
-  <meta name="browser-stats-url" content="https://api.github.com/_private/browser/stats">
 
-  <meta name="browser-errors-url" content="https://api.github.com/_private/browser/errors">
-
-  <meta name="release" content="a4ed0e06d6ce5d2a578791f8f2ec2ef7ccd1c0c3">
-  <meta name="ui-target" content="full">
-
-  <link rel="mask-icon" href="https://github.githubassets.com/assets/pinned-octocat-093da3e6fa40.svg" color="#000000">
-  <link rel="alternate icon" class="js-site-favicon" type="image/png" href="https://github.githubassets.com/favicons/favicon.png">
-  <link rel="icon" class="js-site-favicon" type="image/svg+xml" href="https://github.githubassets.com/favicons/favicon.svg" data-base-href="https://github.githubassets.com/favicons/favicon">
-
-<meta name="theme-color" content="#1e2327">
-<meta name="color-scheme" content="light dark" />
+  
 
 
-  <link rel="manifest" href="/manifest.json" crossOrigin="use-credentials">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
+
+
 
   </head>
 
-  <body class="logged-in env-production page-responsive" style="word-wrap: break-word;">
     <div data-turbo-body class="logged-in env-production page-responsive" style="word-wrap: break-word;">
         <div id="__primerPortalRoot__" role="region" style="z-index: 1000; position: absolute; width: 100%;" data-turbo-permanent></div>
       
@@ -246,8 +176,6 @@
     <span style="width: 0%;" data-view-component="true" class="Progress-item progress-pjax-loader-bar left-0 top-0 color-bg-accent-emphasis"></span>
 </span>      
       
-      <link crossorigin="anonymous" media="all" rel="stylesheet" href="https://github.githubassets.com/assets/primer-react.3d66a64c5878cc361e85.module.css" />
-<link crossorigin="anonymous" media="all" rel="stylesheet" href="https://github.githubassets.com/assets/keyboard-shortcuts-dialog.2de9c7d6456a311fce49.module.css" />
 
 <react-partial
   partial-name="keyboard-shortcuts-dialog"
@@ -820,13 +748,12 @@ data-styled.g39[id="Truncate-sc-x3i4it-0"]{content:"bkmqFA,"}/*!sc*/
     </div>
     <div id="js-global-screen-reader-notice" class="sr-only mt-n1" aria-live="polite" aria-atomic="true" ></div>
     <div id="js-global-screen-reader-notice-assertive" class="sr-only mt-n1" aria-live="assertive" aria-atomic="true">
-          <div style={{ display: 'flex', justifyContent: 'flex-end', marginTop: 12 }}>
-            <button onClick={() => window.print()}
-              style={{ padding: '8px 12px', borderRadius: 8, border: `1px solid ${tokens.border}`, background: '#fff', color: tokens.text, fontWeight: 600 }}>
-              Skriv ut / PDF
-            </button>
-          </div>
+<div style={{ display: 'flex', justifyContent: 'flex-end', marginTop: 12 }}>
+  <button onClick={() => window.print()}
+    style={{ padding: '8px 12px', borderRadius: 8, border: `1px solid ${tokens.border}`, background: '#fff', color: tokens.text, fontWeight: 600 }}>
+    Skriv ut / PDF
+  </button>
+</div>
 </div>
   </body>
 </html>
-
