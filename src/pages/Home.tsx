@@ -8,6 +8,12 @@ type ToolCard = {
   to: string
 }
 
+type ToolSection = {
+  title: string
+  columns: number
+  tools: ToolCard[]
+}
+
 const fermentationTools: ToolCard[] = [
   {
     title: 'Blendkalkylator',
@@ -47,6 +53,24 @@ const reportingTools: ToolCard[] = [
   }
 ]
 
+const sections: ToolSection[] = [
+  {
+    title: 'Andrajäsning',
+    columns: 4,
+    tools: fermentationTools
+  },
+  {
+    title: 'Instruktioner',
+    columns: 3,
+    tools: instructionTools
+  },
+  {
+    title: 'Inrapportering',
+    columns: 3,
+    tools: reportingTools
+  }
+]
+
 const renderTool = (tool: ToolCard) => (
   <div className="card" key={tool.to}>
     <h3>{tool.title}</h3>
@@ -62,26 +86,14 @@ export default function Home(): JSX.Element {
       <p className="muted">Samlat nav för verktyg. Välj kategori.</p>
 
       <div className="stack">
-        <section className="card">
-          <h2>Andrajäsning</h2>
-          <div className="grid cols-4">
-            {fermentationTools.map(renderTool)}
-          </div>
-        </section>
-
-        <section className="card">
-          <h2>Instruktioner</h2>
-          <div className="grid cols-3">
-            {instructionTools.map(renderTool)}
-          </div>
-        </section>
-
-        <section className="card">
-          <h2>Inrapportering</h2>
-          <div className="grid cols-3">
-            {reportingTools.map(renderTool)}
-          </div>
-        </section>
+        {sections.map(section => (
+          <section className="card" key={section.title}>
+            <h2>{section.title}</h2>
+            <div className={`grid cols-${section.columns}`}>
+              {section.tools.map(renderTool)}
+            </div>
+          </section>
+        ))}
       </div>
     </div>
   )
