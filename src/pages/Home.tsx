@@ -25,5 +25,3 @@
      </HashRouter>
    </React.StrictMode>
  )
-   )
- }
