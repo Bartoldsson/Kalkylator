@@ -8,7 +8,7 @@
  import Jaststart from './pages/Jaststart'
  import Forpackningar from './pages/Forpackningar'
  import Leverans from './pages/Leverans'
-import Buteljering from './pages/Buteljering'
+ import Buteljering from './pages/Buteljering'
  
  ReactDOM.createRoot(document.getElementById('root')!).render(
    <React.StrictMode>
