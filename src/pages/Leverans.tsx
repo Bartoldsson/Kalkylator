@@ -190,10 +190,11 @@ export default function Leverans(){
     <div style={{ background: tokens.bg, color: tokens.text, minHeight: '100vh' }}>
       <div style={{ maxWidth: 1160, margin: '0 auto', padding: 16 }}>
         <header style={{ marginBottom: 12, display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
-          <Link to="/" style={{ textDecoration: 'none', color: tokens.blue, fontWeight: 600 }}>← Till startsida</Link>
           <div>
+          <Link to="/" style={{ textDecoration: 'none', color: tokens.blue, fontWeight: 600 }}>← Till startsida</Link>
+          </div>
+            <div>
             <h1 style={{ margin: 0, fontSize: 20, fontWeight: 700 }}>Leverans – Checklista</h1>
-            <div style={{ color: tokens.muted, fontSize: 13 }}>Interaktiv lista med länkar till system. Bocka av steg för steg.</div>
           </div>
         </header>
 
