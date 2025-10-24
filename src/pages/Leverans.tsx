@@ -189,23 +189,30 @@ export default function Leverans(){
   return (
     <div style={{ background: tokens.bg, color: tokens.text, minHeight: '100vh' }}>
       <div style={{ maxWidth: 1160, margin: '0 auto', padding: 16 }}>
-        <header style={{ marginBottom: 12, display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
-          <div>
-          <Link to="/" style={{ textDecoration: 'none', color: tokens.blue, fontWeight: 600 }}>← Till startsida</Link>
-          </div>
-            <div>
-            <h1 style={{ margin: 0, fontSize: 20, fontWeight: 700 }}>Leverans – Checklista</h1>
-          </div>
-        </header>
+        <header style={{ 
+  marginBottom: 12, 
+  display: 'flex', 
+  flexDirection: 'column', 
+  alignItems: 'flex-start' 
+}}>
+  <Link 
+    to="/" 
+    style={{ textDecoration: 'none', color: tokens.blue, fontWeight: 600 }}
+  >
+    ← Till startsida
+  </Link>
+  <h1 style={{ marginTop: 8, fontSize: 20, fontWeight: 700 }}>
+    Leverans – Checklista
+  </h1>
+</header>
 
-        <div style={{ display: 'grid', gap: 16 }}>
-          <Card>
-            <Row>
-              <div style={{ marginLeft: 'auto' }}>
-                <Btn onClick={printPage} style={{ background: '#fff', color: tokens.text }}>Skriv ut / PDF</Btn>
-              </div>
-            </Row>
-          </Card>
+
+       <div style={{ display: 'flex', justifyContent: 'flex-end', marginBottom: 16 }}>
+  <Btn onClick={printPage} style={{ background: '#fff', color: tokens.text }}>
+    Skriv ut / PDF
+  </Btn>
+</div>
+
 
           {sections.map(sec => (
             <Card key={sec.id} title={sec.title}>
