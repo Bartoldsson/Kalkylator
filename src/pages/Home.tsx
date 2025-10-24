@@ -36,6 +36,7 @@ export default function Home(){
       <p className="muted">Samlat nav för verktyg. Välj kategori.</p>
 
       <div className="stack">
+        
         {/* Andrajäsning */}
         <section className="card" style={{ paddingBottom: 12 }}>
           <h2>Andrajäsning</h2>
@@ -82,6 +83,20 @@ export default function Home(){
             </div>
           </div>
         </section>
+
+        {/* Checklistor  */}
+        <section className="card" style={{ paddingBottom: 12 }}>
+          <h2>Checklistor</h2>
+          <div className="grid cols-3" style={gridStyle}>
+            <div className="card" style={cardStyle}>
+              <h3>Vinleverans</h3>
+              <p className="sub">Checklista för intern leverans av vin på onsdagar</p>
+              <div style={footerPush} />
+              <Link className="btn" to="/instruktioner/leverans" style={btnStyle}>Öppna</Link>
+            </div>
+          </div>
+        </section>
+        
       </div>
     </div>
   )
