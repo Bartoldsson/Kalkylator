@@ -62,7 +62,7 @@ export default function Forpackningar(){
 
   return (
     <div className="container stack">
-      <div><Link to="/">← Till kalkylatorer</Link></div>
+      <div><Link to="/">← Till startsida</Link></div>
       <header><h1>Inrapportering – Förpackningar</h1></header>
 
       <div className="grid cols-2">
