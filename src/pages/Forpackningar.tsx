@@ -113,9 +113,9 @@ export default function Forpackningar(){
           <h2>Instruktion</h2>
           <p className="sub">Kvartalsvis inrapportering till TMR.</p>
           <ul>
-            <li>Varje kvartal: Hämta antal från Innovint -> Reporting.</li>
+            <li>Varje kvartal: Hämta antal från Innovint - Reporting.</li>
             <li>Grimmor, Folie, Flaska och Etikett från Bottlings.</li>
-            <li>Kapsyler från Winery Activity Feed -> Action -> Bottling en Tirage.</li>
+            <li>Kapsyler från Winery Activity Feed - Action - Bottling en Tirage.</li>
             <li>Fyll i antal i fälten till vänster.</li>
             <li>Justera vikter (grå rutan) endast om något ändrats.</li>
             <li>Rapportera summerade vikter (kg) per material till TMR.</li>
