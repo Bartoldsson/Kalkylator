@@ -46,7 +46,7 @@ const sections: Section[] = [
       {
         id: "open-export-monday",
         title: "Öppna och exportera ‘Beställning Vin’ (Monday)",
-        note: "Klicka ‘…’ uppe till höger → Fler åtgärder → Exportera tavla till Excel → Kryssa i ‘Inkludera underobjekt’ → Klicka ‘Exportera’.",
+        note: "Expandera objekten som har vin i beställning → Ctrl+P → Layout Liggande → Skriv ut",
         linkLabel: "Monday",
         linkHref: "https://astadvingard.monday.com/boards/5651094640",
       },
