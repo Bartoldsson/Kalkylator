@@ -50,11 +50,7 @@ const sections: Section[] = [
         linkLabel: "Monday",
         linkHref: "https://astadvingard.monday.com/boards/5651094640",
       },
-      {
-        id: "open-print-excel",
-        title: "Öppna och printa ‘Beställning Vin’ i Excel",
-        note: "Öppna Hämtade filer → öppna senaste filen ‘Best_llning_Vin…’ → Aktivera redigering → Ctrl/Cmd+P → Välj A4 → Skalning: ‘Anpassa bladet till en sida’ → Skriv ut.",
-      },
+
     ],
   },
   {
