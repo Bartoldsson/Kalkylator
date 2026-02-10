@@ -1,2 +1,17 @@
 # Ästad – Kalkylatorer (TypeScript/React)
 Lägg till folkhalsomyndigheten statistikrapport försäljning/tillverkning
+PRODUKTION
+INNOVINT
+REPORTING
+WINERY ACTIVITY FEED
+START DATE AND END DATE
+ACTION - PROCESS FRUIT TO VOLUME
+EXPORT
+SUM VOLUME ADDED
+
+SALES SWEDEN
+SKATT 2.0 
+FAKTURERING
+ÄNG PERIOD
+KUST PERIOD
+GÅNGER 1,3333
